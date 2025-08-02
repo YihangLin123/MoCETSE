@@ -1,7 +1,7 @@
 # MoCETSE
 
 A computational method for end-to-end intelligent prediction from raw protein sequence information to effector protein recognition.
-
+![MoCETSE 模型架构](workflow.png)
 
 ## Overview
 MoCETSE enables end-to-end prediction of effector proteins from raw protein sequences through the following key steps:
