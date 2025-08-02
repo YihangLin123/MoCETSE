@@ -76,4 +76,4 @@ python predict.py --fasta_path exmples/Test.fasta \
 
 ## Model Weight
 The pre-trained MoCETSE model weight can be downloaded from:  
-[[https://drive.google.com/file/d/1J-E4FZmf-meSNSsjZ-96EVYmZwVICAYb/view?usp=sharing](https://drive.google.com/file/d/1J-E4FZmf-meSNSsjZ-96EVYmZwVICAYb/view?usp=sharing](https://drive.google.com/drive/my-drive))
+[https://drive.google.com/file/d/1J-E4FZmf-meSNSsjZ-96EVYmZwVICAYb/view?usp=sharing](https://drive.google.com/file/d/1J-E4FZmf-meSNSsjZ-96EVYmZwVICAYb/view?usp=sharing)
