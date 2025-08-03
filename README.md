@@ -3,7 +3,7 @@
 
 We have developed a new computational method called MoCETSE, which enables end-toend intelligent prediction from raw protein sequence information to effector protein recognition. Specifically, MoCETSE first converts raw amino acid sequences into feature vector representations through the pre-trained protein language model ESM-1b. Next, it uses a target preprocessing network based on hybrid convolutional experts to generate more expressive sequence representations. In the Transformer layer, MoCETSE introduces relative positional encoding, explicitly models the relative distances between residues, and achieves high-precision prediction of secreted proteins.
 
-![MoCETSE 模型架构](model framework.png)
+![MoCETSE 模型架构](model%20framework.png)
 
 
 ## Environment Requirements
