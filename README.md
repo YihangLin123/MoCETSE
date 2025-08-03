@@ -30,15 +30,15 @@ Run the following command to train the model (5-fold cross-validation):
 ```bash
 for i in {0..4}
 do
-python train.py  --model effectortransformer \
---data_dir data \
---lr 5e-5 \
---weight_decay 4e-5 \
---lr_scheduler cosine \
---lr_decay_steps 30 \
---kfold 5 \
---fold_num $i \
---log_dir model
+   python train.py  --model effectortransformer \
+   --data_dir data \
+   --lr 5e-5 \
+   --weight_decay 4e-5 \
+   --lr_scheduler cosine \
+   --lr_decay_steps 30 \
+   --kfold 5 \
+   --fold_num $i \
+   --log_dir model
 done
 ```
 
@@ -47,9 +47,9 @@ done
 Use the trained model for effector protein prediction with:
 ```bash
 python predict.py --fasta_path exmples/Test.fasta \
-               --model_location checkpoint.pt \
-               --secretion I II III IV VI \
-               --out_dir results
+                  --model_location checkpoint.pt \
+                  --secretion I II III IV VI \
+                  --out_dir results
 ```
 
 
