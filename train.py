@@ -147,7 +147,7 @@ def main(args):
 
 
 if __name__ == '__main__':
-    parser = ArgumentParser(description="Train a DeepSecE model for secreted effector prediction.")
+    parser = ArgumentParser(description="Train a MoCETSE model for secreted effector prediction.")
 
     # Select Model
     parser.add_argument('--model', required=True, choices=['effectortransformer', 'esm1bmodel'], type=str,
@@ -204,3 +204,4 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     main(args)
+
