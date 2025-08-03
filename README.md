@@ -1,13 +1,8 @@
 # MoCETSE
 
-A computational method for end-to-end intelligent prediction from raw protein sequence information to effector protein recognition.
 
-
-## Overview
-MoCETSE enables end-to-end prediction of effector proteins from raw protein sequences through the following key steps:
-- Converts raw amino acid sequences into feature vector representations using the pre-trained protein language model ESM-1b.
-- Generates more expressive sequence representations via a target preprocessing network based on hybrid convolutional experts.
-- Introduces relative positional encoding in the Transformer layer to explicitly model relative distances between residues, achieving high-precision prediction of secreted proteins.
+We have developed a new computational method called MoCETSE, which enables end-toend intelligent prediction from raw protein sequence information to effector protein recognition. Specifically, MoCETSE first converts raw amino acid sequences into feature vector representations through the pre-trained protein language model ESM-1b. Next, it uses a target preprocessing network based on hybrid convolutional experts to generate more expressive sequence representations. In the Transformer layer, MoCETSE introduces relative positional encoding, explicitly models the relative distances between residues, and achieves high-precision prediction of secreted proteins.
+![MoCETSE 模型架构](model framework.png)
 
 
 ## Environment Requirements
@@ -46,17 +41,6 @@ python train.py  --model effectortransformer \
 done
 ```
 
-**Parameters explanation**:
-- `--model`: Model type (default: `effectortransformer`)
-- `--data_dir`: Path to the training data directory
-- `--lr`: Learning rate (default: `5e-5`)
-- `--weight_decay`: Weight decay (default: `4e-5`)
-- `--lr_scheduler`: Learning rate scheduler (default: `cosine`)
-- `--lr_decay_steps`: Learning rate decay steps (default: `30`)
-- `--kfold`: Number of cross-validation folds (default: `5`)
-- `--fold_num`: Current fold index (in loop: `0..4`)
-- `--log_dir`: Directory to save training logs and checkpoints
-
 
 ## Prediction
 Use the trained model for effector protein prediction with:
@@ -66,12 +50,6 @@ python predict.py --fasta_path exmples/Test.fasta \
                --secretion I II III IV VI \
                --out_dir results
 ```
-
-**Parameters explanation**:
-- `--fasta_path`: Path to the input FASTA file (e.g., `exmples/Test.fasta`)
-- `--model_location`: Path to the trained model checkpoint (e.g., `checkpoint.pt`)
-- `--secretion`: Types of secretion systems to predict (e.g., `I II III IV VI`)
-- `--out_dir`: Directory to save prediction results
 
 
 ## Model Weight
