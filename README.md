@@ -23,8 +23,9 @@ warmup-scheduler==0.3.2
 ```
 
 ## Model Weight
-The pre-trained MoCETSE model weight can be downloaded from:  
-[https://drive.google.com/file/d/1J-E4FZmf-meSNSsjZ-96EVYmZwVICAYb/view?usp=sharing](https://drive.google.com/file/d/1J-E4FZmf-meSNSsjZ-96EVYmZwVICAYb/view?usp=sharing)
+### Download Link
+The pre-trained MoCETSE model weight file is available for download via Google Drive:  
+[MoCETSE Pre-trained Model Weight](https://drive.google.com/file/d/17s9Ybz8bqCbaqsB-yOAn68v6kxrpWvh_/view?usp=sharing)
 
 ## Model Training
 Run the following command to train the model (5-fold cross-validation):
