@@ -54,7 +54,7 @@ python predict.py --fasta_path exmples/Test.fasta \
 
 ## Genome‑wide prediction of secreted proteins
 ```bash
-python predict_genome.py --fasta_path examples/NC_002942.5_protein.fasta \
+python predict_genome.py --fasta_path genome_data/NC_002942.5_protein.fasta \
 			--model_location checkpoint.pt \
 			--data_dir data \
 			--out_dir results/NC_002942.5
