@@ -22,21 +22,9 @@ umap-learn==0.5.3
 warmup-scheduler==0.3.2
 ```
 
-### Install the logomaker Package
-Before plotting sequence attention, you need to install the `logomaker` package first. Run the following command in your terminal:
-```bash
-pip install logomaker
-```
-
-### Install Required Packages
-To predict secretion systems and substrate proteins, you need to install `macsyfinder` and `hmmer` first. Execute the following commands according to the package type:
-#### Install macsyfinder (PyPI)
-```bash
-pip install macsyfinder
-conda install -c bioconda hmmer
-cd data
-unzip TXSS.zip
-```
+## Model Weight
+The pre-trained MoCETSE model weight can be downloaded from:  
+[https://drive.google.com/file/d/1J-E4FZmf-meSNSsjZ-96EVYmZwVICAYb/view?usp=sharing](https://drive.google.com/file/d/1J-E4FZmf-meSNSsjZ-96EVYmZwVICAYb/view?usp=sharing)
 
 ## Model Training
 Run the following command to train the model (5-fold cross-validation):
@@ -55,7 +43,6 @@ do
 done
 ```
 
-
 ## Prediction
 Use the trained model for effector protein prediction with:
 ```bash
@@ -65,7 +52,26 @@ python predict.py --fasta_path exmples/Test.fasta \
                   --out_dir results
 ```
 
+## Genome‑wide prediction of secreted proteins
+```bash
+python predict_genome.py --fasta_path examples/NC_002942.5_protein.fasta \
+			--model_location checkpoint.pt \
+			--data_dir data \
+			--out_dir results/NC_002942.5
+```
 
-## Model Weight
-The pre-trained MoCETSE model weight can be downloaded from:  
-[https://drive.google.com/file/d/1J-E4FZmf-meSNSsjZ-96EVYmZwVICAYb/view?usp=sharing](https://drive.google.com/file/d/1J-E4FZmf-meSNSsjZ-96EVYmZwVICAYb/view?usp=sharing)
+### Install the logomaker Package
+Before plotting sequence attention, you need to install the `logomaker` package first. Run the following command in your terminal:
+```bash
+pip install logomaker
+```
+
+### Install Required Packages
+To predict secretion systems and substrate proteins, you need to install `macsyfinder` and `hmmer` first. Execute the following commands according to the package type:
+#### Install macsyfinder (PyPI)
+```bash
+pip install macsyfinder
+conda install -c bioconda hmmer
+cd data
+unzip TXSS.zip
+```
