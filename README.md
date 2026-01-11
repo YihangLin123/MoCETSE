@@ -1,10 +1,8 @@
 # MoCETSE
 
-
 We have developed a new computational method called MoCETSE, which enables end-toend intelligent prediction from raw protein sequence information to effector protein recognition. Specifically, MoCETSE first converts raw amino acid sequences into feature vector representations through the pre-trained protein language model ESM-1b. Next, it uses a target preprocessing network based on hybrid convolutional experts to generate more expressive sequence representations. In the Transformer layer, MoCETSE introduces relative positional encoding, explicitly models the relative distances between residues, and achieves high-precision prediction of secreted proteins.
 
 ![MoCETSE 模型架构](model%20framework.png)
-
 
 ## Environment Requirements
 Install the required dependencies before using MoCETSE:
@@ -24,6 +22,21 @@ umap-learn==0.5.3
 warmup-scheduler==0.3.2
 ```
 
+### Install the logomaker Package
+Before plotting sequence attention, you need to install the `logomaker` package first. Run the following command in your terminal:
+```bash
+pip install logomaker
+```
+
+### Install Required Packages
+To predict secretion systems and substrate proteins, you need to install `macsyfinder` and `hmmer` first. Execute the following commands according to the package type:
+#### Install macsyfinder (PyPI)
+```bash
+pip install macsyfinder
+conda install -c bioconda hmmer
+cd data
+unzip TXSS.zip
+```
 
 ## Model Training
 Run the following command to train the model (5-fold cross-validation):
