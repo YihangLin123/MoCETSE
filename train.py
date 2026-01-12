@@ -46,10 +46,10 @@ def main(args):
 
     # Configure datasets and dataloaders
     alphabet = Alphabet.from_architecture("roberta_large")
-    train_dataset = TXSESequenceDataSet(fasta_path=os.path.join(args.data_dir, 'Train-2918.fasta'),
+    train_dataset = TXSESequenceDataSet(fasta_path=os.path.join(args.data_dir, 'Train-2904.fasta'),
                                         transform=label2index, mode='train', kfold=args.kfold, fold_num=args.fold_num,
                                         seed=args.seed)
-    valid_dataset = TXSESequenceDataSet(fasta_path=os.path.join(args.data_dir, 'Train-2918.fasta'),
+    valid_dataset = TXSESequenceDataSet(fasta_path=os.path.join(args.data_dir, 'Train-2904.fasta'),
                                         transform=label2index, mode='valid', kfold=args.kfold, fold_num=args.fold_num,
                                         seed=args.seed)
     test_dataset = TXSESequenceDataSet(fasta_path=os.path.join(args.data_dir, 'Test-260.fasta'),
@@ -204,4 +204,5 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     main(args)
+
 
